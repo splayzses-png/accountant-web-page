@@ -17,10 +17,12 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
 
   const categories = [
     { id: 'all', labelEn: 'All Practices', labelHi: 'सभी सेवाएं' },
-    { id: 'tax', labelEn: 'Taxation & GST', labelHi: 'टैक्स एवं जीएसटी' },
-    { id: 'audit', labelEn: 'Audit & Assurance', labelHi: 'ऑडिट एवं जांच' },
-    { id: 'corporate', labelEn: 'Company Setup', labelHi: 'कंपनी रजिस्ट्रेशन' },
-    { id: 'advisory', labelEn: 'Advisory & CMA', labelHi: 'प्रोजेक्ट रिपोर्ट व सीएमए' },
+    { id: 'tax', labelEn: 'Income Tax', labelHi: 'आयकर (ITR)' },
+    { id: 'gst', labelEn: 'GST & ITC', labelHi: 'जीएसटी' },
+    { id: 'corporate', labelEn: 'Company Formation', labelHi: 'कंपनी रजिस्ट्रेशन' },
+    { id: 'audit', labelEn: 'Audits (44AB)', labelHi: 'ऑडिटिंग' },
+    { id: 'advisory', labelEn: 'Bank CMA & DPR', labelHi: 'बैंक लोन सीएमए' },
+    { id: 'ip', labelEn: 'Trademark & IP', labelHi: 'ट्रेडमार्क' },
   ];
 
   const filteredServices = SERVICES_DATA.filter((s) => {

@@ -86,7 +86,7 @@ export default function App() {
           onOpenConsultationModal={(sid) => openConsultationModal(sid)}
         />
 
-        {/* Real Client Testimonials (4.9★ from 63 Google Reviews) */}
+        {/* Real Client Testimonials */}
         <TestimonialsSection lang={lang} />
 
         {/* Practical FAQs */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, ArrowRight, Star, ShieldCheck, MapPin } from 'lucide-react';
+import { Phone, ArrowRight, Star, MapPin } from 'lucide-react';
 import { motion } from 'motion/react';
 import { FIRM_DETAILS, Language } from '../data/content';
 
@@ -15,7 +15,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenConsultationModal }) => 
       <div className="absolute inset-0 z-0">
         <img
           src="/src/assets/images/ca_office_interior_1791453965197.jpg"
-          alt="Awasthi & Associates Chartered Accountants Executive Office"
+          alt="Executive Office"
           className="w-full h-full object-cover object-center opacity-20 filter brightness-90"
           referrerPolicy="no-referrer"
           onError={(e) => {
@@ -73,7 +73,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenConsultationModal }) => 
           )}
         </motion.h1>
 
-        {/* Concise, impactful subtext (reduced by 60% for crisp reading) */}
+        {/* Concise, impactful subtext */}
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -81,8 +81,8 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenConsultationModal }) => 
           className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10 font-light"
         >
           {lang === 'en'
-            ? 'Guiding Lucknow’s enterprises and professionals through rigorous GST compliance, strategic taxation, audits, and business incorporation. Zero penalty exposure.'
-            : 'लखनऊ के व्यापारियों, डॉक्टरों और कंपनियों के लिए जीएसटी, आयकर, वैधानिक ऑडिट एवं कंपनी रजिस्ट्रेशन में वरिष्ठ चार्टर्ड अकाउंटेंट का प्रत्यक्ष मार्गदर्शन।'}
+            ? 'Guiding enterprises and professionals through rigorous GST compliance, strategic taxation, audits, and business incorporation. Zero penalty exposure.'
+            : 'व्यापारियों, डॉक्टरों और कंपनियों के लिए जीएसटी, आयकर, वैधानिक ऑडिट एवं कंपनी रजिस्ट्रेशन में वरिष्ठ चार्टर्ड अकाउंटेंट का प्रत्यक्ष मार्गदर्शन।'}
         </motion.p>
 
         {/* Focused CTAs with clean spacing */}
@@ -112,7 +112,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenConsultationModal }) => 
           </a>
         </motion.div>
 
-        {/* Refined Luxury Floating Metrics Ribbon (Single row, responsive) */}
+        {/* Refined Luxury Floating Metrics Ribbon */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
