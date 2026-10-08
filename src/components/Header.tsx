@@ -44,14 +44,14 @@ export const Header: React.FC<HeaderProps> = ({
             className="flex items-center gap-2 group min-w-0"
           >
             <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-br from-[#D8B467] to-[#A07A2A] flex items-center justify-center text-[#070E1A] font-serif-display font-bold text-base sm:text-lg shadow-sm shrink-0">
-              A
+              {FIRM_DETAILS.logoInitial}
             </span>
             <div className="flex flex-col min-w-0">
               <span className="text-sm sm:text-lg md:text-xl font-serif-display font-semibold tracking-tight text-white group-hover:text-[#F3E7C4] transition-colors truncate">
-                {lang === 'en' ? 'Awasthi & Associates' : 'अवस्थी & एसोसिएट्स'}
+                {lang === 'en' ? FIRM_DETAILS.shortName : FIRM_DETAILS.shortNameHi}
               </span>
               <span className="hidden xs:block text-[9px] sm:text-[10px] font-sans tracking-widest uppercase text-amber-200/70 font-medium truncate">
-                {lang === 'en' ? 'Chartered Accountants' : 'चार्टर्ड अकाउंटेंट्स · लखनऊ'}
+                {lang === 'en' ? 'Chartered Accountants' : 'चार्टर्ड अकाउंटेंट्स'}
               </span>
             </div>
           </a>
@@ -130,9 +130,9 @@ export const Header: React.FC<HeaderProps> = ({
             <div className="flex items-center justify-between py-2 border-b border-white/10 text-xs text-slate-400">
               <span className="flex items-center gap-1.5 text-amber-300 font-medium">
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                <span>4.9★ (63 Google Reviews)</span>
+                <span>{FIRM_DETAILS.googleRating}★ ({FIRM_DETAILS.googleReviewCount} Client Reviews)</span>
               </span>
-              <span>Vrindavan Colony, LKO</span>
+              <span>{FIRM_DETAILS.city}</span>
             </div>
 
             <div className="grid grid-cols-2 gap-2 pt-1">

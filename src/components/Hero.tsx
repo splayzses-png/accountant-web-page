@@ -37,14 +37,14 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenConsultationModal }) => 
         >
           <div className="flex items-center gap-1 text-amber-300">
             <Star className="w-3.5 h-3.5 fill-amber-300 text-amber-300" />
-            <span className="font-semibold text-white">4.9★</span>
+            <span className="font-semibold text-white">{FIRM_DETAILS.googleRating}★</span>
           </div>
           <span className="text-white/20" aria-hidden="true">|</span>
-          <span>63 Google Reviews</span>
+          <span>{FIRM_DETAILS.googleReviewCount}+ Client Reviews</span>
           <span className="text-white/20 hidden sm:inline" aria-hidden="true">|</span>
           <span className="hidden sm:inline-flex items-center gap-1 text-slate-300">
             <MapPin className="w-3 h-3 text-amber-400/80" />
-            Opp. Apex Trauma Centre, Lucknow
+            {FIRM_DETAILS.city}, {FIRM_DETAILS.state}
           </span>
         </motion.div>
 
@@ -121,10 +121,10 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenConsultationModal }) => 
         >
           <div className="space-y-1">
             <div className="text-2xl sm:text-3xl font-serif-display font-medium text-amber-200 tabular-nums">
-              4.9★
+              {FIRM_DETAILS.googleRating}★
             </div>
             <div className="text-xs text-slate-400 uppercase tracking-wider">
-              {lang === 'en' ? '63 Google Reviews' : 'सत्यापित गूगल समीक्षाएं'}
+              {lang === 'en' ? `${FIRM_DETAILS.googleReviewCount}+ Verified Reviews` : `${FIRM_DETAILS.googleReviewCount}+ सत्यापित समीक्षाएं`}
             </div>
           </div>
 

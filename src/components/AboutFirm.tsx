@@ -44,10 +44,10 @@ export const AboutFirm: React.FC<AboutFirmProps> = ({ lang, onOpenConsultationMo
                   </div>
                   <div>
                     <h4 className="text-xs font-semibold text-white">
-                      {lang === 'en' ? 'Vrindavan Colony Practice' : 'वृन्दावन कॉलोनी कार्यालय'}
+                      {lang === 'en' ? 'Central Financial Practice' : 'मुख्य व्यावसायिक कार्यालय'}
                     </h4>
                     <p className="text-[11px] text-slate-400 mt-0.5 leading-snug">
-                      Opposite Apex Trauma Centre, Lucknow 226029
+                      {FIRM_DETAILS.landmarkEn}, {FIRM_DETAILS.city}
                     </p>
                   </div>
                 </div>
@@ -91,8 +91,8 @@ export const AboutFirm: React.FC<AboutFirmProps> = ({ lang, onOpenConsultationMo
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
               {lang === 'en'
-                ? 'Headquartered opposite Apex Trauma Centre in Vrindavan Colony, Awasthi & Associates is dedicated to providing high-touch, senior-level Chartered Accountancy counsel to Lucknow’s business community, healthcare institutions, and private individuals.'
-                : 'वृन्दावन कॉलोनी में एपेक्स ट्रॉमा सेंटर के ठीक सामने स्थित, अवस्थी & एसोसिएट्स लखनऊ के व्यापारिक प्रतिष्ठानों, अस्पतालों, निर्माण ठेकेदारों और स्टार्टअप्स को सम्पूर्ण वित्तीय एवं कर परामर्श प्रदान करती है।'}
+                ? `Headquartered in ${FIRM_DETAILS.city}, ${FIRM_DETAILS.shortName} is dedicated to providing high-touch, senior-level Chartered Accountancy counsel to our business community, healthcare institutions, and private individuals.`
+                : `${FIRM_DETAILS.city} में स्थित, ${FIRM_DETAILS.shortNameHi} व्यापारिक प्रतिष्ठानों, अस्पतालों, निर्माण ठेकेदारों और स्टार्टअप्स को सम्पूर्ण वित्तीय एवं कर परामर्श प्रदान करती है।`}
             </p>
 
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
@@ -149,7 +149,7 @@ export const AboutFirm: React.FC<AboutFirmProps> = ({ lang, onOpenConsultationMo
                 href={`tel:${FIRM_DETAILS.phoneRaw}`}
                 className="text-xs text-slate-300 hover:text-white transition-colors"
               >
-                {lang === 'en' ? 'Call: 098999 77123 →' : 'कॉल: 098999 77123 →'}
+                {lang === 'en' ? `Call: ${FIRM_DETAILS.phoneDisplay} →` : `कॉल: ${FIRM_DETAILS.phoneDisplay} →`}
               </a>
             </div>
           </motion.div>

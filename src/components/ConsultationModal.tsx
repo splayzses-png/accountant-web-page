@@ -63,9 +63,9 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
     const selectedSrv = SERVICES_DATA.find((s) => s.id === serviceId);
     const srvName = selectedSrv ? selectedSrv.titleEn : 'Chartered Accountancy Consultation';
     const msg = encodeURIComponent(
-      `Hello Awasthi & Associates, I would like to book a consultation slot.\nName: ${name}\nPhone: ${phone}\nService: ${srvName}\nMode: ${meetingMode === 'office' ? 'In-Office (Vrindavan Colony)' : 'Telephonic'}\nPreferred Date: ${preferredDate}\nPreferred Slot: ${timeSlot}`
+      `Hello ${FIRM_DETAILS.shortName}, I would like to book a consultation slot.\nName: ${name}\nPhone: ${phone}\nService: ${srvName}\nMode: ${meetingMode === 'office' ? `In-Office (${FIRM_DETAILS.city})` : 'Telephonic'}\nPreferred Date: ${preferredDate}\nPreferred Slot: ${timeSlot}`
     );
-    window.open(`https://wa.me/919899977123?text=${msg}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/${FIRM_DETAILS.phoneRaw.replace('+', '')}?text=${msg}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -94,8 +94,8 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
           </h3>
           <p className="text-xs text-slate-400 mt-1 font-light">
             {lang === 'en'
-              ? 'Meet at our Vrindavan Colony office or schedule a direct telephonic session.'
-              : 'वृन्दावन कॉलोनी कार्यालय में मिलें अथवा सीधे फोन पर बात करें।'}
+              ? `Meet at our ${FIRM_DETAILS.city} office or schedule a direct telephonic session.`
+              : `${FIRM_DETAILS.city} कार्यालय में मिलें अथवा सीधे फोन पर बात करें।`}
           </p>
         </div>
 
@@ -156,7 +156,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                 <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="block font-medium">{lang === 'en' ? 'In-Office' : 'कार्यालय'}</span>
-                  <span className="text-[10px] text-slate-400 font-light">Vrindavan Colony</span>
+                  <span className="text-[10px] text-slate-400 font-light">{FIRM_DETAILS.city}</span>
                 </div>
               </button>
 
@@ -172,7 +172,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                 <Phone className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="block font-medium">{lang === 'en' ? 'Direct Call' : 'फोन पर'}</span>
-                  <span className="text-[10px] text-slate-400 font-light">098999 77123</span>
+                  <span className="text-[10px] text-slate-400 font-light">{FIRM_DETAILS.phoneDisplay}</span>
                 </div>
               </button>
             </div>

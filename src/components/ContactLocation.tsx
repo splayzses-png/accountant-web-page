@@ -37,9 +37,9 @@ export const ContactLocation: React.FC<ContactLocationProps> = ({ lang }) => {
 
   const handleWhatsAppRedirect = () => {
     const text = encodeURIComponent(
-      `Hello Awasthi & Associates, I am ${formData.name}. Inquiring regarding ${formData.service}. Mobile: ${formData.phone}. Note: ${formData.message || 'Please contact me.'}`
+      `Hello ${FIRM_DETAILS.shortName}, I am ${formData.name}. Inquiring regarding ${formData.service}. Mobile: ${formData.phone}. Note: ${formData.message || 'Please contact me.'}`
     );
-    window.open(`https://wa.me/919899977123?text=${text}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/${FIRM_DETAILS.phoneRaw.replace('+', '')}?text=${text}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -71,8 +71,8 @@ export const ContactLocation: React.FC<ContactLocationProps> = ({ lang }) => {
           </h2>
           <p className="text-slate-400 text-sm font-light">
             {lang === 'en'
-              ? 'Visit our Vrindavan Colony office opposite Apex Trauma Centre or book a callback.'
-              : 'वृन्दावन कॉलोनी कार्यालय में बैठक तय करें या सीधे फोन पर परामर्श लें।'}
+              ? `Visit our office in ${FIRM_DETAILS.city} or schedule a confidential advisory session.`
+              : `${FIRM_DETAILS.city} स्थित कार्यालय में बैठक तय करें या सीधे फोन पर परामर्श लें।`}
           </p>
         </div>
 

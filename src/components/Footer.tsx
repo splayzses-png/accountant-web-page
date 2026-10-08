@@ -18,15 +18,15 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             </a>
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm font-light">
               {lang === 'en'
-                ? 'Chartered Accountancy practice in Vrindavan Colony, Lucknow. Providing statutory tax filing, audit assurance, entity registration, and financial advisory.'
-                : 'लखनऊ स्थित प्रमुख चार्टर्ड अकाउंटेंसी फर्म। जीएसटी, आयकर, वैधानिक ऑडिट, कंपनी इनकॉरपोरेशन एवं प्रोजेक्ट रिपोर्ट में विश्वसनीय मार्गदर्शन।'}
+                ? `Chartered Accountancy practice in ${FIRM_DETAILS.city}. Providing statutory tax filing, audit assurance, entity registration, and financial advisory.`
+                : `${FIRM_DETAILS.city} स्थित प्रमुख चार्टर्ड अकाउंटेंसी फर्म। जीएसटी, आयकर, वैधानिक ऑडिट, कंपनी इनकॉरपोरेशन एवं प्रोजेक्ट रिपोर्ट में विश्वसनीय मार्गदर्शन।`}
             </p>
 
             <div className="flex items-center gap-2 text-xs text-amber-300/90 pt-1">
               <Star className="w-3.5 h-3.5 fill-amber-300 text-amber-300" />
-              <span className="font-semibold text-white">4.9 / 5.0</span>
+              <span className="font-semibold text-white">{FIRM_DETAILS.googleRating} / 5.0</span>
               <span className="text-slate-600">·</span>
-              <span className="text-slate-400">63 Verified Google Reviews</span>
+              <span className="text-slate-400">{FIRM_DETAILS.googleReviewCount}+ Verified Reviews</span>
             </div>
           </div>
 
@@ -96,7 +96,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
         {/* Bottom Bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
           <div>
-            © {new Date().getFullYear()} Awasthi & Associates Chartered Accountants.
+            © {new Date().getFullYear()} {FIRM_DETAILS.nameEn}. All rights reserved.
           </div>
           <div className="flex items-center gap-4">
             <a href="#about" className="hover:text-slate-300 transition-colors">

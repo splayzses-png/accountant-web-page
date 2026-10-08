@@ -47,25 +47,44 @@ export interface DueDateItem {
   penaltyWarningHi: string;
 }
 
+/**
+ * =========================================================================
+ * TEMPLATE CONFIGURATION - CUSTOMIZE YOUR FIRM DETAILS HERE
+ * Change the values below to personalize this website template for your firm.
+ * =========================================================================
+ */
 export const FIRM_DETAILS = {
-  nameEn: "Awasthi & Associates Chartered Accountants",
-  nameHi: "अवस्थी & एसोसिएट्स चार्टर्ड अकाउंटेंट्स",
-  shortName: "Awasthi & Associates",
-  phoneDisplay: "098999 77123",
-  phoneRaw: "+919899977123",
-  address: "B-2/1008, HIMALAY ENCLAVE-III, opposite APPEX TRAUMA CENTR, Vrindavan Colony, Lucknow, Uttar Pradesh 226029",
-  landmarkEn: "Opposite Apex Trauma Centre, Vrindavan Colony",
-  landmarkHi: "एपेक्स ट्रॉमा सेंटर के सामने, वृन्दावन कॉलोनी",
-  pincode: "226029",
+  // Brand Names
+  nameEn: "Apex & Associates Chartered Accountants",
+  nameHi: "एपेक्स & एसोसिएट्स चार्टर्ड अकाउंटेंट्स",
+  shortName: "Apex & Associates",
+  shortNameHi: "एपेक्स & एसोसिएट्स",
+  logoInitial: "A",
+
+  // Contact Information
+  phoneDisplay: "098765 43210",
+  phoneRaw: "+919876543210",
+  email: "consult@apexassociates.in",
+
+  // Physical Location
+  address: "Suite B-102, Premier Financial Towers, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010",
+  landmarkEn: "Opposite Commercial Hub, Financial District",
+  landmarkHi: "कमर्शियल हब के सामने, फाइनेंशियल डिस्ट्रिक्ट",
+  pincode: "226010",
   city: "Lucknow",
   state: "Uttar Pradesh",
+
+  // Business Hours
   hoursEn: "Monday – Saturday: 10:00 AM – 7:00 PM (Sunday by Appointment)",
   hoursHi: "सोमवार – शनिवार: सुबह 10:00 से शाम 7:00 बजे तक (रविवार अपॉइंटमेंट पर)",
+
+  // Social Proof & Trust
   googleRating: 4.9,
-  googleReviewCount: 63,
-  email: "contact@awasthiassociates.in",
-  googleMapsUrl: "https://maps.google.com/?q=B-2/1008,+HIMALAY+ENCLAVE-III,+opposite+APPEX+TRAUMA+CENTR,+Vrindavan+Colony,+Lucknow,+Uttar+Pradesh+226029",
-  whatsappUrl: "https://wa.me/919899977123?text=Hello%20Awasthi%20%26%20Associates,%20I%20would%20like%20to%20consult%20regarding%20Chartered%20Accountancy%20services."
+  googleReviewCount: 65,
+
+  // External Links
+  googleMapsUrl: "https://maps.google.com/?q=Lucknow+Uttar+Pradesh",
+  whatsappUrl: "https://wa.me/919876543210?text=Hello%20Apex%20%26%20Associates,%20I%20would%20like%20to%20consult%20regarding%20Chartered%20Accountancy%20services."
 };
 
 export const SERVICES_DATA: ServiceItem[] = [
@@ -77,7 +96,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     titleHi: "जीएसटी पंजीकरण, रिटर्न व विवाद समाधान",
     shortDescEn: "End-to-end Goods and Services Tax compliance, monthly filings, 2B vs 3B input tax credit reconciliation, and departmental notice management.",
     shortDescHi: "जीएसटी पंजीकरण, नियमित रिटर्न फाइलिंग (GSTR-1/3B), इनपुट टैक्स क्रेडिट मिलान और नोटिसों का कानूनी समाधान।",
-    fullDescEn: "We streamline your indirect tax operations to ensure zero penalty exposure. From seamless registration to complex inverted duty refund claims, annual GSTR-9/9C audit reconciliations, and representation before GST authorities.",
+    fullDescEn: "We streamline indirect tax operations to ensure zero penalty exposure. From seamless registration to complex inverted duty refund claims, annual GSTR-9/9C audit reconciliations, and representation before GST authorities.",
     fullDescHi: "हम आपके व्यापार के जीएसटी अनुपालन को पूरी तरह त्रुटिरहित बनाते हैं। नया रजिस्ट्रेशन, 2B रिकॉन्सिलिएशन, वार्षिक रिटर्न (9/9C) और विभागीय नोटिसों का त्वरित जवाब।",
     featuresEn: [
       "Monthly & Quarterly GSTR-1, GSTR-3B filings with ITC verification",
@@ -93,8 +112,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       "एक्सपोर्ट एवं इनवर्टेड ड्यूटी स्ट्रक्चर जीएसटी रिफंड",
       "ई-वे बिल और ई-इनवॉइसिंग प्रणाली सेटअप"
     ],
-    bestForEn: "Retailers, Wholesalers, Manufacturers, E-commerce sellers, and Service providers across Lucknow and UP.",
-    bestForHi: "लखनऊ और उत्तर प्रदेश के व्यापारी, निर्माता, ई-कॉमर्स विक्रेता और सेवा प्रदाता।",
+    bestForEn: "Retailers, Wholesalers, Manufacturers, E-commerce sellers, and Service providers.",
+    bestForHi: "व्यापारी, निर्माता, ई-कॉमर्स विक्रेता और सेवा प्रदाता।",
     timelineEn: "Turnaround: 24–48 hours for standard filings",
     timelineHi: "समय सीमा: सामान्य रिटर्न के लिए 24–48 घंटे"
   },
@@ -164,20 +183,20 @@ export const SERVICES_DATA: ServiceItem[] = [
     titleHi: "कंपनी, एलएलपी व स्टार्टअप रजिस्ट्रेशन",
     shortDescEn: "Turnkey business incorporation across Private Limited, LLP, One Person Company (OPC), Section 8, along with Startup India and MSME certifications.",
     shortDescHi: "प्राइवेट लिमिटेड कंपनी, एलएलपी, ओपीसी का त्वरित निगमन, एमएसएमई उद्योग आधार एवं स्टार्टअप इंडिया पंजीकरण।",
-    fullDescEn: "Launch your enterprise in Lucknow on a rock-solid legal foundation. We handle name reservation, digital signatures (DSC), Director Identification (DIN), drafting MOA & AOA, PAN/TAN, and bank account setup guidance.",
+    fullDescEn: "Launch your enterprise on a rock-solid legal foundation. We handle name reservation, digital signatures (DSC), Director Identification (DIN), drafting MOA & AOA, PAN/TAN, and bank account setup guidance.",
     fullDescHi: "अपने नए उद्यम की शुरुआत मजबूत नींव के साथ करें। नाम अनुमोदन, डीएससी, एमओए/एओए ड्राफ्टिंग, इनकॉरपोरेशन सर्टिफिकेट और शुरुआती बैंकिंग अनुपालन।",
     featuresEn: [
       "Private Limited Company, LLP, and OPC incorporation in 5–7 business days",
       "Startup India DPIIT recognition for tax exemptions under Section 80-IAC",
       "MSME Udyam registration for priority lending and interest subsidies",
-      "Trade License, Shop & Establishment, and FSSAI Food Licensing in Lucknow",
+      "Trade License, Shop & Establishment, and FSSAI Food Licensing",
       "Annual ROC compliance (AOC-4, MGT-7/7A, DIR-3 KYC)"
     ],
     featuresHi: [
       "प्राइवेट लिमिटेड और एलएलपी का 5 से 7 कार्य दिवसों में पूर्ण निगमन",
       "डीपीआईआईटी (DPIIT) स्टार्टअप इंडिया मान्यता एवं टैक्स छूट सहायता",
       "एमएसएमई उद्यम रजिस्ट्रेशन एवं सरकारी योजनाओं का लाभ",
-      "लखनऊ नगर निगम ट्रेड लाइसेंस, शॉप एक्ट एवं एफएसएसएआई लाइसेंस",
+      "ट्रेड लाइसेंस, शॉप एक्ट एवं एफएसएसएआई लाइसेंस",
       "वार्षिक आरओसी फाइलिंग (AOC-4, MGT-7) और डायरेक्टर केवाईसी"
     ],
     bestForEn: "First-time founders, technology startups, expanding family partnerships, and traders converting to corporate entities.",
@@ -193,8 +212,8 @@ export const SERVICES_DATA: ServiceItem[] = [
     titleHi: "अकाउंटिंग, बहीखाता एवं वर्चुअल सीएफओ",
     shortDescEn: "Reliable day-to-day bookkeeping, monthly bank reconciliations, payroll compliance, and executive MIS reporting to empower data-driven decisions.",
     shortDescHi: "दैनिक बहीखाता, मासिक बैंक समाधान, पेरोल, टीडीएस कटौती और मासिक एमआईएस रिपोर्टिंग ताकि आप अपने व्यापार पर ध्यान दे सकें।",
-    fullDescEn: "Say goodbye to chaotic year-end ledger cleanups. Our team manages your accounting continuously using TallyPrime, Zoho Books, or QuickBooks, giving you real-time visibility into your cash flow, profit margins, and liabilities.",
-    fullDescHi: "वर्ष के अंत में कागज़ात खोजने का झंझट खत्म। टैली और ज़ोहो बुक्स के माध्यम से सुचारु बहीखाता, जिससे आपकी बैलेंस शीट हमेशा अपडेट रहे।",
+    fullDescEn: "Say goodbye to chaotic year-end ledger cleanups. Our team manages your accounting continuously using modern cloud software, giving you real-time visibility into your cash flow, profit margins, and liabilities.",
+    fullDescHi: "वर्ष के अंत में कागज़ात खोजने का झंझट खत्म। सुचारु बहीखाता, जिससे आपकी बैलेंस शीट हमेशा अपडेट रहे।",
     featuresEn: [
       "Daily ledger posting, invoice recording, and bank statement reconciliations",
       "Monthly Profit & Loss, Balance Sheet, and Accounts Receivable/Payable aging reports",
@@ -252,12 +271,12 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDescEn: "Bank-approved Credit Monitoring Arrangement (CMA) data, Detailed Project Reports (DPR), and financial feasibility models for securing commercial credit.",
     shortDescHi: "बैंक लोन, सीसी लिमिट, टर्म लोन के लिए सीएमए डाटा, विस्तृत प्रोजेक्ट रिपोर्ट (DPR) और वित्तीय मॉडल तैयार करना।",
     fullDescEn: "Securing capital from nationalized and private banks requires ironclad financial projections. We craft comprehensive CMA data reports, debt-service coverage ratio (DSCR) analyses, and valuation models that bankers respect.",
-    fullDescHi: "एसबीआई, पीएनबी, एचडीएफसी आदि बैंकों से सीसी लिमिट या टर्म लोन स्वीकृत कराने हेतु सटीक सीएमए डाटा और प्रोजेक्ट रिपोर्ट तैयार करते हैं।",
+    fullDescHi: "बैंकों से सीसी लिमिट या टर्म लोन स्वीकृत कराने हेतु सटीक सीएमए डाटा और प्रोजेक्ट रिपोर्ट तैयार करते हैं।",
     featuresEn: [
       "Comprehensive CMA Data preparation for Working Capital (CC/OD) limits",
       "Detailed Project Reports (DPR) for new manufacturing units and commercial setups",
       "Debt Service Coverage Ratio (DSCR), Break-Even, and Sensitivity forecasting",
-      "PMEGP, Mudra, and UP State industrial subsidy scheme documentation",
+      "PMEGP, Mudra, and industrial subsidy scheme documentation",
       "Financial health audit prior to bank loan applications to avoid rejection"
     ],
     featuresHi: [
@@ -267,7 +286,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       "मुद्रा लोन, पीएमईजीपी (PMEGP) एवं सरकारी सब्सिडी मार्गदर्शन",
       "लोन आवेदन से पूर्व वित्तीय रिपोर्ट की मजबूती की जांच"
     ],
-    bestForEn: "Industrialists, contractors, hospital promoters, and expanding traders in Uttar Pradesh.",
+    bestForEn: "Industrialists, contractors, hospital promoters, and expanding enterprises.",
     bestForHi: "उद्योगपति, ठेकेदार, अस्पताल संचालक और विस्तार कर रहे व्यवसायी।",
     timelineEn: "3–5 working days with complete financial assumptions",
     timelineHi: "3 से 5 कार्य दिवस"
@@ -280,15 +299,15 @@ export const TESTIMONIALS_DATA: ReviewItem[] = [
     author: "Dr. R. K. Srivastava",
     roleEn: "Senior Surgeon & Healthcare Director",
     roleHi: "वरिष्ठ सर्जन एवं चिकित्सा निदेशक",
-    businessTypeEn: "Private Hospital near Apex Trauma Centre",
-    businessTypeHi: "निजी अस्पताल, वृन्दावन कॉलोनी",
+    businessTypeEn: "Private Hospital & Healthcare Practice",
+    businessTypeHi: "निजी अस्पताल एवं क्लीनिक",
     rating: 5,
-    reviewEn: "Being situated right opposite Apex Trauma Centre in Vrindavan Colony, Awasthi & Associates has been an invaluable blessing for our medical practice. Handling professional hospital billing, complex 194J TDS deductions, and personal high-bracket ITR filing was always overwhelming until we partnered with them. Their precision, ethical transparency, and immediate accessibility make them Lucknow's finest CA firm.",
-    reviewHi: "वृन्दावन कॉलोनी में एपेक्स ट्रॉमा सेंटर के सामने स्थित होने के कारण, अवस्थी & एसोसिएट्स हमारे मेडिकल प्रैक्टिस के लिए एक बड़ा सहारा हैं। अस्पताल के बिलिंग, टीडीएस और डॉक्टरों के आईटीआर को उन्होंने बहुत ही पारदर्शी और व्यवस्थित तरीके से संभाला है। समयबद्धता और व्यक्तिगत ध्यान इनकी सबसे बड़ी विशेषता है।",
-    dateEn: "Verified Google Review",
-    dateHi: "सत्यापित गूगल समीक्षा",
-    locationEn: "Vrindavan Colony, Lucknow",
-    locationHi: "वृन्दावन कॉलोनी, लखनऊ"
+    reviewEn: "Partnering with this firm has been an invaluable asset for our medical practice. Handling professional hospital billing, complex 194J TDS deductions, and personal high-bracket ITR filing was always overwhelming until we engaged them. Their precision, ethical transparency, and immediate accessibility make them our trusted advisors.",
+    reviewHi: "इस फर्म के साथ जुड़ना हमारे मेडिकल प्रैक्टिस के लिए एक बड़ा सहारा रहा है। अस्पताल के बिलिंग, टीडीएस और डॉक्टरों के आईटीआर को उन्होंने बहुत ही पारदर्शी और व्यवस्थित तरीके से संभाला है। समयबद्धता और व्यक्तिगत ध्यान इनकी सबसे बड़ी विशेषता है।",
+    dateEn: "Verified Client Review",
+    dateHi: "सत्यापित ग्राहक समीक्षा",
+    locationEn: "Healthcare District",
+    locationHi: "हेल्थकेयर डिस्ट्रिक्ट"
   },
   {
     id: "rev-2",
@@ -298,12 +317,12 @@ export const TESTIMONIALS_DATA: ReviewItem[] = [
     businessTypeEn: "Wholesale Distribution & Manufacturing",
     businessTypeHi: "थोक व्यापार एवं निर्माण उद्योग",
     rating: 5,
-    reviewEn: "We received a complicated GST DRC-01 demand notice regarding input tax credit discrepancy from the department. Awasthi & Associates handled the reconciliation with absolute mastery. They drafted a meticulous factual reply citing relevant circulars, represented our case personally, and got the notice settled with zero undue liability. Truly 5-star professional competence.",
-    reviewHi: "हमें इनपुट टैक्स क्रेडिट के संबंध में जीएसटी विभाग से डीआरसी-01 का जटिल नोटिस मिला था। अवस्थी & एसोसिएट्स ने हमारे पूरे खातों का 2B से 3B मिलान किया और इतने सटीक कानूनी तथ्यों के साथ जवाब पेश किया कि बिना किसी अतिरिक्त जुर्माने के मामला हल हो गया। अत्यधिक विश्वसनीय सीए फर्म।",
-    dateEn: "Verified Google Review",
-    dateHi: "सत्यापित गूगल समीक्षा",
-    locationEn: "Transport Nagar / Alambagh, Lucknow",
-    locationHi: "ट्रांसपोर्ट नगर / आलमबाग, लखनऊ"
+    reviewEn: "We received a complicated GST DRC-01 demand notice regarding input tax credit discrepancy from the department. The team handled the reconciliation with absolute mastery. They drafted a meticulous factual reply citing relevant circulars, represented our case personally, and got the notice settled with zero undue liability.",
+    reviewHi: "हमें इनपुट टैक्स क्रेडिट के संबंध में जीएसटी विभाग से डीआरसी-01 का जटिल नोटिस मिला था। इस टीम ने हमारे पूरे खातों का 2B से 3B मिलान किया और इतने सटीक कानूनी तथ्यों के साथ जवाब पेश किया कि बिना किसी अतिरिक्त जुर्माने के मामला हल हो गया।",
+    dateEn: "Verified Client Review",
+    dateHi: "सत्यापित ग्राहक समीक्षा",
+    locationEn: "Industrial Estate",
+    locationHi: "औद्योगिक क्षेत्र"
   },
   {
     id: "rev-3",
@@ -313,27 +332,27 @@ export const TESTIMONIALS_DATA: ReviewItem[] = [
     businessTypeEn: "Tech & E-commerce Startup",
     businessTypeHi: "टेक एवं ई-कॉमर्स स्टार्टअप",
     rating: 5,
-    reviewEn: "From registering our Private Limited company to getting Startup India DPIIT recognition and setting up our monthly GST and TDS schedules, the entire journey was seamless. Unlike large impersonal firms where you only speak to junior trainees, here you get direct consultation from experienced chartered accountants who genuinely care about your startup's growth.",
-    reviewHi: "हमारी प्राइवेट लिमिटेड कंपनी के इनकॉरपोरेशन से लेकर स्टार्टअप इंडिया मान्यता और नियमित जीएसटी फाइलिंग तक, पूरी प्रक्रिया बेहद सुगम रही। यहां सीधे अनुभवी चार्टर्ड अकाउंटेंट से मार्गदर्शन मिलता है जो नए स्टार्टअप्स की ज़रूरतों को समझते हैं।",
-    dateEn: "Verified Google Review",
-    dateHi: "सत्यापित गूगल समीक्षा",
-    locationEn: "Gomti Nagar & Lucknow",
-    locationHi: "गोमती नगर, लखनऊ"
+    reviewEn: "From registering our Private Limited company to getting Startup India DPIIT recognition and setting up our monthly GST and TDS schedules, the entire journey was seamless. Unlike large impersonal firms where you only speak to junior trainees, here you get direct consultation from experienced chartered accountants.",
+    reviewHi: "हमारी प्राइवेट लिमिटेड कंपनी के इनकॉरपोरेशन से लेकर स्टार्टअप इंडिया मान्यता और नियमित जीएसटी फाइलिंग तक, पूरी प्रक्रिया बेहद सुगम रही। यहां सीधे अनुभवी चार्टर्ड अकाउंटेंट से मार्गदर्शन मिलता है।",
+    dateEn: "Verified Client Review",
+    dateHi: "सत्यापित ग्राहक समीक्षा",
+    locationEn: "Technology Park",
+    locationHi: "टेक्नोलॉजी पार्क"
   },
   {
     id: "rev-4",
     author: "Er. Satish Chandra Tiwari",
-    roleEn: "Govt. Civil Contractor & Infrastructure Builder",
+    roleEn: "Civil Contractor & Infrastructure Builder",
     roleHi: "शासकीय निर्माण ठेकेदार",
     businessTypeEn: "Infrastructure & Civil Projects",
     businessTypeHi: "सिविल इन्फ्रास्ट्रक्चर प्रोजेक्ट्स",
     rating: 5,
-    reviewEn: "In civil contracting, working capital limits and bank CMA reports are the lifeblood of our business. Awasthi & Associates prepared our CMA data and balance sheet projections with such financial rigor that our bank enhanced our CC limit in record time. Their tax audit under Section 44AB is thorough and impeccably documented.",
-    reviewHi: "सरकारी ठेकेदारी में बैंक की सीसी लिमिट और सीएमए डाटा सबसे महत्वपूर्ण होते हैं। अवस्थी & एसोसिएट्स ने हमारी बैलेंस शीट और सीएमए रिपोर्ट इतनी मजबूती से तैयार की कि बैंक ने बहुत कम समय में लिमिट बढ़ा दी। टैक्स ऑडिट में इनका कार्य सराहनीय है।",
-    dateEn: "Verified Google Review",
-    dateHi: "सत्यापित गूगल समीक्षा",
-    locationEn: "Raebareli Road, Lucknow",
-    locationHi: "रायबरेली रोड, लखनऊ"
+    reviewEn: "In civil contracting, working capital limits and bank CMA reports are the lifeblood of our business. The firm prepared our CMA data and balance sheet projections with such financial rigor that our bank enhanced our CC limit in record time. Their tax audit under Section 44AB is impeccably documented.",
+    reviewHi: "ठेकेदारी में बैंक की सीसी लिमिट और सीएमए डाटा सबसे महत्वपूर्ण होते हैं। फर्म ने हमारी बैलेंस शीट और सीएमए रिपोर्ट इतनी मजबूती से तैयार की कि बैंक ने बहुत कम समय में लिमिट बढ़ा दी। टैक्स ऑडिट में इनका कार्य सराहनीय है।",
+    dateEn: "Verified Client Review",
+    dateHi: "सत्यापित ग्राहक समीक्षा",
+    locationEn: "Commercial Zone",
+    locationHi: "कमर्शियल जोन"
   },
   {
     id: "rev-5",
@@ -343,12 +362,12 @@ export const TESTIMONIALS_DATA: ReviewItem[] = [
     businessTypeEn: "Consumer Goods & Retail",
     businessTypeHi: "उपभोक्ता सामग्री एवं खुदरा व्यापार",
     rating: 5,
-    reviewEn: "I have been consulting them for the past 4 years for all my business accounting and GST filings. They never let a single statutory deadline pass, saving us from late fees every single quarter. Their office in Himalay Enclave is very conveniently accessible, and their phone support is prompt and courteous.",
-    reviewHi: "पिछले 4 वर्षों से मैं अपने व्यापार के सभी खातों और जीएसटी के लिए इनसे जुड़ा हूँ। कभी भी कोई अंतिम तिथि नहीं छूटी, जिससे हम पेनल्टी से हमेशा सुरक्षित रहते हैं। हिमालय एन्क्लेव में स्थित इनका कार्यालय बहुत सुविधाजनक है और फोन पर भी तुरंत सहायता मिलती है।",
-    dateEn: "Verified Google Review",
-    dateHi: "सत्यापित गूगल समीक्षा",
-    locationEn: "Vrindavan Colony, Lucknow",
-    locationHi: "वृन्दावन कॉलोनी, लखनऊ"
+    reviewEn: "I have been consulting them for the past 4 years for all my business accounting and GST filings. They never let a single statutory deadline pass, saving us from late fees every single quarter. Their office is conveniently accessible, and their phone support is prompt and courteous.",
+    reviewHi: "पिछले 4 वर्षों से मैं अपने व्यापार के सभी खातों और जीएसटी के लिए इनसे जुड़ा हूँ। कभी भी कोई अंतिम तिथि नहीं छूटी, जिससे हम पेनल्टी से हमेशा सुरक्षित रहते हैं। इनका सहयोग हमेशा तत्पर रहता है।",
+    dateEn: "Verified Client Review",
+    dateHi: "सत्यापित ग्राहक समीक्षा",
+    locationEn: "Metro Central",
+    locationHi: "मेट्रो सेंट्रल"
   },
   {
     id: "rev-6",
@@ -358,12 +377,12 @@ export const TESTIMONIALS_DATA: ReviewItem[] = [
     businessTypeEn: "Cross-Border Consultancy & Real Estate",
     businessTypeHi: "प्रॉपर्टी बिक्री एवं विदेशी आय",
     rating: 5,
-    reviewEn: "Sold ancestral property in Lucknow and needed capital gains advice and 15CA/15CB repatriation certification. CA Awasthi explained Section 54EC exemptions and capital gains accounts scheme clearly without legal jargon. Saved substantial tax legitimately. Highly recommended for property transactions and NRI taxation.",
-    reviewHi: "लखनऊ में पुश्तैनी संपत्ति बेचने के बाद कैपिटल गेन टैक्स और 54EC बॉण्ड्स के बारे में बहुत सरल भाषा में समझाया। पूरी प्रक्रिया कानूनी रूप से पारदर्शी रही और काफी टैक्स की बचत हुई। प्रॉपर्टी टैक्स के मामलों में इनकी विशेषज्ञता अद्भुत है।",
-    dateEn: "Verified Google Review",
-    dateHi: "सत्यापित गूगल समीक्षा",
-    locationEn: "South City / Lucknow",
-    locationHi: "साउथ सिटी, लखनऊ"
+    reviewEn: "Sold ancestral property and needed capital gains advice and 15CA/15CB repatriation certification. The senior partner explained Section 54EC exemptions and capital gains accounts scheme clearly without legal jargon. Saved substantial tax legitimately. Highly recommended.",
+    reviewHi: "पुश्तैनी संपत्ति बेचने के बाद कैपिटल गेन टैक्स और 54EC बॉण्ड्स के बारे में बहुत सरल भाषा में समझाया। पूरी प्रक्रिया कानूनी रूप से पारदर्शी रही और काफी टैक्स की बचत हुई। प्रॉपर्टी टैक्स के मामलों में इनकी विशेषज्ञता अद्भुत है।",
+    dateEn: "Verified Client Review",
+    dateHi: "सत्यापित ग्राहक समीक्षा",
+    locationEn: "South City",
+    locationHi: "साउथ सिटी"
   }
 ];
 
@@ -447,44 +466,44 @@ export const WHY_CHOOSE_US_DATA = [
     number: "01",
     titleEn: "Direct Senior CA Attention",
     titleHi: "वरिष्ठ सीए का प्रत्यक्ष मार्गदर्शन",
-    descEn: "Unlike volume-driven aggregators where your files are handed off to anonymous interns, your financial matters at Awasthi & Associates receive senior chartered accountant scrutiny from day one.",
+    descEn: "Unlike volume-driven aggregators where your files are handed off to anonymous interns, your financial matters receive senior chartered accountant scrutiny from day one.",
     descHi: "यहाँ आपके महत्वपूर्ण वित्तीय दस्तावेज किसी अनुभवहीन कर्मचारी के हाथ में नहीं जाते, बल्कि वरिष्ठ चार्टर्ड अकाउंटेंट द्वारा व्यक्तिगत रूप से जांचे जाते हैं।"
   },
   {
     number: "02",
     titleEn: "Strict Zero-Penalty Discipline",
     titleHi: "शून्य पेनल्टी का संकल्प",
-    descEn: "Our automated internal compliance radar tracks every GST, TDS, advance tax, and ROC deadline well in advance, keeping your business 100% compliant and saving you thousands in late fees.",
+    descEn: "Our automated internal compliance radar tracks every GST, TDS, advance tax, and ROC deadline well in advance, keeping your business 100% compliant and saving you in late fees.",
     descHi: "हमारा अनुपालन सिस्टम हर अंतिम तिथि पर पहले से नजर रखता है, जिससे आपका व्यापार किसी भी पेनल्टी या ब्याज से हमेशा सुरक्षित रहता है।"
   },
   {
     number: "03",
-    titleEn: "4.9★ Proven Local Trust in Lucknow",
-    titleHi: "लखनऊ में 4.9★ प्रमाणित विश्वास",
-    descEn: "With 63 verified Google reviews, we are proud to be one of the highest-rated CA practices in Vrindavan Colony, South City, and the greater Lucknow metropolitan area.",
-    descHi: "63 वास्तविक गूगल समीक्षाओं और 4.9 रेटिंग के साथ, हम वृन्दावन कॉलोनी और लखनऊ में सबसे भरोसेमंद और सम्मानित सीए फर्म्स में से एक हैं।"
+    titleEn: "4.9★ Proven Client Trust",
+    titleHi: "4.9★ प्रमाणित विश्वास",
+    descEn: "With 60+ verified reviews, we are proud to be one of the highest-rated CA practices, recognized for punctual delivery and zero tax surprise.",
+    descHi: "60 से अधिक वास्तविक समीक्षाओं और 4.9 रेटिंग के साथ, हम सबसे भरोसेमंद और सम्मानित सीए फर्म्स में से एक हैं।"
   },
   {
     number: "04",
     titleEn: "100% Confidential & Ethical Practice",
     titleHi: "पूर्ण गोपनीयता एवं नैतिक सिद्धांत",
-    descEn: "Operating strictly under the code of ethics prescribed by the Institute of Chartered Accountants of India (ICAI). Your bank data, margins, and proprietary information remain hermetically secure.",
+    descEn: "Operating strictly under the code of ethics prescribed by the Institute of Chartered Accountants of India (ICAI). Your bank data and proprietary information remain secure.",
     descHi: "आईसीएआई (ICAI) की सख्त आचार संहिता के तहत कार्य। आपकी व्यावसायिक जानकारी और बैंक खाते पूर्ण रूप से गोपनीय और सुरक्षित रहते हैं।"
   }
 ];
 
 export const FAQS_DATA = [
   {
-    qEn: "Where is Awasthi & Associates located in Lucknow?",
-    qHi: "अवस्थी & एसोसिएट्स का कार्यालय लखनऊ में कहाँ स्थित है?",
-    aEn: "Our office is located at B-2/1008, Himalay Enclave-III, directly opposite Apex Trauma Centre, Vrindavan Colony, Lucknow, Uttar Pradesh 226029. We are easily accessible from Raebareli Road, Shaheed Path, and South City.",
-    aHi: "हमारा कार्यालय B-2/1008, हिमालय एन्क्लेव-III, एपेक्स ट्रॉमा सेंटर के ठीक सामने, वृन्दावन कॉलोनी, लखनऊ (पिन: 226029) में स्थित है। यह शहीद पथ और रायबरेली रोड से आसानी से पहुँचा जा सकता है।"
+    qEn: "Where is the firm's office located?",
+    qHi: "फर्म का कार्यालय कहाँ स्थित है?",
+    aEn: "Our primary office is conveniently located in the premier financial district. We offer ample parking and private conference rooms for confidential financial and tax advisory sessions.",
+    aHi: "हमारा मुख्य कार्यालय प्रमुख व्यावसायिक क्षेत्र में स्थित है, जहाँ गोपनीय वित्तीय एवं कर चर्चा हेतु सुविधाजनक वातावरण उपलब्ध है।"
   },
   {
     qEn: "Can I book a consultation online or over the phone?",
     qHi: "क्या मैं फोन या ऑनलाइन परामर्श बुक कर सकता हूँ?",
-    aEn: "Yes! You can call us directly at 098999 77123, message us on WhatsApp, or use the interactive booking form on this website to schedule an in-office appointment or a confidential telephonic consultation.",
-    aHi: "हाँ! आप हमें सीधे 098999 77123 पर कॉल कर सकते हैं, व्हाट्सएप कर सकते हैं, या इस वेबसाइट पर दिए गए फॉर्म से अपॉइंटमेंट बुक कर सकते हैं।"
+    aEn: "Yes! You can call our direct helpline, message us on WhatsApp, or use the interactive booking form on this website to schedule an in-office appointment or telephonic consultation.",
+    aHi: "हाँ! आप हमें सीधे फोन पर कॉल कर सकते हैं, व्हाट्सएप कर सकते हैं, या इस वेबसाइट पर दिए गए फॉर्म से अपॉइंटमेंट बुक कर सकते हैं।"
   },
   {
     qEn: "What documents are required for filing Income Tax Return (ITR)?",
@@ -499,9 +518,9 @@ export const FAQS_DATA = [
     aHi: "जी हाँ, जीएसटी नोटिस (DRC-01), मिसमैच स्क्रूटनी और आयकर विभाग के नोटिसों का विधिक प्रारूप तैयार करना और विभाग के समक्ष पक्ष रखना हमारी प्रमुख विशेषज्ञता है।"
   },
   {
-    qEn: "How much time does it take to register a Private Limited Company or LLP in Lucknow?",
-    qHi: "लखनऊ में प्राइवेट लिमिटेड कंपनी या एलएलपी रजिस्टर करने में कितना समय लगता है?",
-    aEn: "Once all shareholder KYC documents (PAN, Aadhaar, bank statement, electricity bill) and DSC approvals are complete, the Ministry of Corporate Affairs (MCA) typically issues the Certificate of Incorporation within 5 to 7 working days.",
+    qEn: "How much time does it take to register a Private Limited Company or LLP?",
+    qHi: "प्राइवेट लिमिटेड कंपनी या एलएलपी रजिस्टर करने में कितना समय लगता है?",
+    aEn: "Once all shareholder KYC documents (PAN, Aadhaar, bank statement) and DSC approvals are complete, the Ministry of Corporate Affairs (MCA) typically issues the Certificate of Incorporation within 5 to 7 working days.",
     aHi: "सभी आवश्यक केवाईसी दस्तावेज (पैन, आधार, बैंक स्टेटमेंट आदि) प्राप्त होने के बाद एमसीए द्वारा 5 से 7 कार्य दिवसों में कंपनी का रजिस्ट्रेशन प्रमाण पत्र जारी हो जाता है।"
   }
 ];
