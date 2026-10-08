@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #0F172A;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-hindi {
+  font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Luxury gold text & border utilities */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F3E7C4 0%, #D8B467 50%, #B8923F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(135deg, rgba(216, 180, 103, 0.4), rgba(216, 180, 103, 0.05)) 1;
+}
+
+.gold-glow {
+  box-shadow: 0 0 35px -10px rgba(216, 180, 103, 0.25);
+}
+
+.glass-card-dark {
+  background: rgba(15, 29, 51, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Subtle smooth keyframes */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
